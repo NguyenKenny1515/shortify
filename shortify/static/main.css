@@ -1,0 +1,46 @@
+body {
+    background-color: #4FFFB0;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.3em;
+    color: #ffffffff;
+    width: 50%;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+}
+
+.url-input {
+    border: 10px solid white;
+    padding: 0.3em 2em;
+    text-align: center;
+}
+
+.url-input form {
+    display: inline-block;
+    margin-bottom: 1em;
+}
+
+#url {
+    height: 40px;
+    width: 300px;
+    border: solid white;
+    border-radius: 10px;
+}
+
+#submit {
+    height: 47px;
+    border-radius: 10px;
+    border: solid white;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.url-input p {
+    margin: 0 auto;
+}
+
+.description-text {
+    margin: 0 auto;
+}

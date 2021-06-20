@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h2>Your Shortened Link</h2>
+    <p>Copy the shortened link and share it in messages, texts, posts, websites and other locations.</p>
+    <div class="copy">
+        <input type="text" value="https://www.{{ short_url }}" id="copy">
+        <button onclick="copyLink()">Copy Link</button>
+    </div>
+    <p>Original Link: <a href="{{ orig_url }}" target="_blank">{{ orig_url }}</a></p>
+    <a href="{{ url_for('home') }}">Shortify another link</a>
+{% endblock content %}
