@@ -35,6 +35,10 @@ h2, h3, .description-icon h4 {
     margin-bottom: 1em;
 }
 
+#url-input form p {
+    margin-top: 0.5em;
+}
+
 #url-input p {
     margin: 0 auto;
 }
