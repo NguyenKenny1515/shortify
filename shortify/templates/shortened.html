@@ -1,11 +1,14 @@
 {% extends "layout.html" %}
 {% block content %}
-    <h2>Your Shortened Link</h2>
-    <p>Copy the shortened link and share it in messages, texts, posts, websites and other locations.</p>
-    <div class="copy">
-        <input type="text" value="https://www.{{ short_url }}" id="copy">
-        <button onclick="copyLink()">Copy Link</button>
+    <div id="copy-intro">
+        <h2>Your Shortified Link</h2>
+        <p>Copy the shortened link and share it in messages, texts, posts, social media, 
+            and anywhere on the web!</p>
     </div>
-    <p>Original Link: <a href="{{ orig_url }}" target="_blank">{{ orig_url }}</a></p>
-    <a href="{{ url_for('home') }}">Shortify another link</a>
+    <div id="copy-container">
+        <input type="text" value="{{ short_url }}" id="copyLink" readonly>
+        <button id="copyButton" onclick="copyLink()">Copy Link</button>
+        <p>Original Link: <a href="{{ orig_url }}" target="_blank">{{ orig_url }}</a></p>
+        <p>Have more links? <a href="{{ url_for('home') }}">Shortify another one!</a></p>
+    </div>
 {% endblock content %}

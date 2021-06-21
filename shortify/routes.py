@@ -19,13 +19,13 @@ def home():
         response_json = response.json()
 
         return redirect(url_for("shortened", 
-            orig_url=response_json.get("destination"), 
-            short_url=response_json.get("shortUrl")))
+                                orig_url=response_json.get("destination"), 
+                                short_url=response_json.get("shortUrl")))
     return render_template("home.html", form=form)
 
 @app.route("/shortened")
 def shortened():
     return render_template("shortened.html", 
-        title="Shortened URL", 
-        orig_url=request.args.get("orig_url"), 
-        short_url=request.args.get("short_url"))
+                            title="Shortened URL", 
+                            orig_url=request.args.get("orig_url"), 
+                            short_url=request.args.get("short_url"))

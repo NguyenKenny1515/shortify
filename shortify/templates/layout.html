@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500&display=swap" rel="stylesheet"> 
+
         {% if title %}
             <title>Shortify - {{ title }}</title>
         {% else %}
@@ -14,7 +15,7 @@
     </head>
     <body>
         <header>
-            <h1>Shortify</h1>
+            <h1><a href="{{ url_for('home') }}">Shortify</a></h1>
         </header>
 
         <main>
@@ -24,8 +25,8 @@
         <footer>
             <h4>© 2021 Shortify</h4>
             <h4>Developed by Kenny Nguyen</h4>
-            <a href="#" class="fa fa-github-square"></a>
-            <a href="https://www.linkedin.com/in/kennyqnguyen/" class="fa fa-linkedin-square"></a>
+            <a href="https://github.com/NguyenKenny1515/shortify" class="fa fa-github"></a>
+            <a href="https://www.linkedin.com/in/kennyqnguyen/" class="fa fa-linkedin"></a>
         </footer>
 
         <script type="text/javascript" src="{{ url_for('static', filename='main.js') }}"></script>

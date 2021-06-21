@@ -1,8 +1,8 @@
 {% extends "layout.html" %}
 {% block content %}
-    <div class="url-input">
-        <h2>Paste Your Link To Be Shortened!</h2>
-        <form method="POST" action="">
+    <div id="url-input">
+        <h2>Paste Your Link To Be Shortified!</h2>
+        <form method="POST" action="" autocomplete="off">
             {{ form.hidden_tag() }} <!-- CSRF token -->
 
             {{ form.url }}
@@ -13,37 +13,35 @@
                 {% endfor %}
             {% endif %}
         </form>
-        <p>ShortURL.at is a free tool to shorten a URL or reduce a link.</p>
-        <p>Use our URL Shortener to create a shortened link making it easy to remember.</p>
+        <p>Shortify is a free and quick tool for shortening URLs.</p>
+        <p>Use Shortify to create easy to remember shortened links!</p>
     </div>
     <div class="description-text">
-        <h3>Simple and fast URL shortener!</h3>
-        <p>ShortURL allows to reduce long links from Instagram, Facebook, YouTube, Twitter, Linked In 
-            and top sites on the Internet, just paste the long URL and click the Shorten URL button. 
-            On the next screen, copy the shortened URL and share it on websites, chat and e-mail. </p>
+        <h3>Simple and Fast</h3>
+        <p>Shortify reduces ugly and long links from the top sites on the web like Instagram, Facebook, 
+            YouTube, Twitter, and reddit so humans can actually read them. Just paste your long 
+            URL and click the button. Easy as that! </p>
     </div>
     <div class="description-text">
-        <h3>Shorten, share and track</h3>
-        <p>Your shortened URLs can be used in publications, documents, advertisements, blogs, forums, 
-            instant messages, and other locations. Track statistics for your business and projects by 
-            monitoring the number of hits from your URL with the click counter, you do not have to 
-            register. </p>
+        <h3>Shorten and Share</h3>
+        <p>Instead of long unwieldly links, use your newly shortened links in social media posts, documents, 
+            blogs, forums, instant messages, advertisements, and other locations. </p>
     </div>
-    <div class="description-icons">
+    <div class="description-icon-container">
         <div class="description-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:scaleX(-1);-ms-filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)"><path d="M20,8h-5.612l1.123-3.367c0.202-0.608,0.1-1.282-0.275-1.802S14.253,2,13.612,2H12c-0.297,0-0.578,0.132-0.769,0.36 L6.531,8H4c-1.103,0-2,0.897-2,2v9c0,1.103,0.897,2,2,2h3h10.307c0.829,0,1.581-0.521,1.873-1.298l2.757-7.351 C21.979,12.239,22,12.12,22,12v-2C22,8.897,21.103,8,20,8z M4,10h2v9H4V10z M20,11.819L17.307,19H8V9.362L12.468,4l1.146,0 l-1.562,4.683c-0.103,0.305-0.051,0.64,0.137,0.901C12.377,9.846,12.679,10,13,10h7V11.819z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="62" height="62" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:scaleX(-1);-ms-filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)"><path d="M20,8h-5.612l1.123-3.367c0.202-0.608,0.1-1.282-0.275-1.802S14.253,2,13.612,2H12c-0.297,0-0.578,0.132-0.769,0.36 L6.531,8H4c-1.103,0-2,0.897-2,2v9c0,1.103,0.897,2,2,2h3h10.307c0.829,0,1.581-0.521,1.873-1.298l2.757-7.351 C21.979,12.239,22,12.12,22,12v-2C22,8.897,21.103,8,20,8z M4,10h2v9H4V10z M20,11.819L17.307,19H8V9.362L12.468,4l1.146,0 l-1.562,4.683c-0.103,0.305-0.051,0.64,0.137,0.901C12.377,9.846,12.679,10,13,10h7V11.819z"></path></svg>
             <h4>Easy</h4>
-            <p>ShortURL is easy and fast, enter the long link to get your shortened link</p>
+            <p>Powered by Rebrandly's API, Shortify is brain-dead easy. Enter a long link to get your shortened link</p>
         </div>
         <div class="description-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);"><path d="M4.222 19.778c.975.975 2.255 1.462 3.535 1.462 1.281-.001 2.562-.487 3.536-1.462l2.828-2.829-1.414-1.414-2.828 2.829c-1.169 1.167-3.072 1.169-4.243 0-1.169-1.17-1.169-3.073 0-4.243l2.829-2.828L7.051 9.879l-2.829 2.828C2.273 14.656 2.273 17.829 4.222 19.778zM19.778 11.293c1.948-1.949 1.948-5.122 0-7.071-1.95-1.95-5.123-1.948-7.071 0L9.879 7.051l1.414 1.414 2.828-2.829c1.17-1.167 3.073-1.169 4.243 0 1.169 1.17 1.169 3.073 0 4.243l-2.829 2.828 1.414 1.414L19.778 11.293z"></path><path transform="rotate(-134.999 12 12)" d="M11 5.999H13V18H11z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="62" height="62" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);"><path d="M4.222 19.778c.975.975 2.255 1.462 3.535 1.462 1.281-.001 2.562-.487 3.536-1.462l2.828-2.829-1.414-1.414-2.828 2.829c-1.169 1.167-3.072 1.169-4.243 0-1.169-1.17-1.169-3.073 0-4.243l2.829-2.828L7.051 9.879l-2.829 2.828C2.273 14.656 2.273 17.829 4.222 19.778zM19.778 11.293c1.948-1.949 1.948-5.122 0-7.071-1.95-1.95-5.123-1.948-7.071 0L9.879 7.051l1.414 1.414 2.828-2.829c1.17-1.167 3.073-1.169 4.243 0 1.169 1.17 1.169 3.073 0 4.243l-2.829 2.828 1.414 1.414L19.778 11.293z"></path><path transform="rotate(-134.999 12 12)" d="M11 5.999H13V18H11z"></path></svg>
             <h4>Shortened</h4>
-            <p>Use any link, no matter what size, ShortURL always shortens</p>
+            <p>Works with any link, no matter what size. You can count on Shortify to always shortify</p>
         </div>
         <div class="description-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);"><path d="M12,2C9.243,2,7,4.243,7,7v2H6c-1.103,0-2,0.897-2,2v9c0,1.103,0.897,2,2,2h12c1.103,0,2-0.897,2-2v-9c0-1.103-0.897-2-2-2 h-1V7C17,4.243,14.757,2,12,2z M9,7c0-1.654,1.346-3,3-3s3,1.346,3,3v2H9V7z M18.002,20H13v-2.278c0.595-0.347,1-0.985,1-1.722 c0-1.103-0.897-2-2-2s-2,0.897-2,2c0,0.736,0.405,1.375,1,1.722V20H6v-9h12L18.002,20z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="62" height="62" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);"><path d="M12,2C9.243,2,7,4.243,7,7v2H6c-1.103,0-2,0.897-2,2v9c0,1.103,0.897,2,2,2h12c1.103,0,2-0.897,2-2v-9c0-1.103-0.897-2-2-2 h-1V7C17,4.243,14.757,2,12,2z M9,7c0-1.654,1.346-3,3-3s3,1.346,3,3v2H9V7z M18.002,20H13v-2.278c0.595-0.347,1-0.985,1-1.722 c0-1.103-0.897-2-2-2s-2,0.897-2,2c0,0.736,0.405,1.375,1,1.722V20H6v-9h12L18.002,20z"></path></svg>
             <h4>Secure</h4>
-            <p>It is fast and secure, our service have HTTPS protocol and data encryption</p>
+            <p>Fast and secure. Our links are HTTPS enabled and come with data encryption</p>
         </div>
     </div>
 {% endblock content %}

@@ -1,8 +1,8 @@
 body {
-    background-color: #4FFFB0;
+    background-color: #53e7a5;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1.3em;
-    color: #ffffffff;
+    color: #ffffff;
     width: 50%;
     margin: 0 auto;
 }
@@ -11,15 +11,32 @@ header {
     text-align: center;
 }
 
-.url-input {
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+h2, h3, .description-icon h4 {
+    color: rgb(31, 30, 30);
+}
+
+#url-input, #copy-container {
     border: 10px solid white;
     padding: 0.3em 2em;
     text-align: center;
+    margin-bottom: 2em;
 }
 
-.url-input form {
+#url-input form {
     display: inline-block;
     margin-bottom: 1em;
+}
+
+#url-input p {
+    margin: 0 auto;
 }
 
 #url {
@@ -30,17 +47,109 @@ header {
 }
 
 #submit {
-    height: 47px;
+    height: 3.5em;
+}
+
+#submit, #copyButton {
+    width: 80px;
     border-radius: 10px;
     border: solid white;
     background-color: transparent;
     cursor: pointer;
+    transition: background-color 0.5s ease;
 }
 
-.url-input p {
-    margin: 0 auto;
+#submit:hover, #copyButton:hover {
+    background-color: white;
 }
 
-.description-text {
-    margin: 0 auto;
+.description-text h3 {
+    margin-bottom: 0;
+}
+
+.description-text p {
+    margin-top: 0.3em;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.description-icon-container {
+    display: flex;
+    margin-top: 2em;
+    text-align: center;
+}
+
+.description-icon * {
+    margin: 0;
+}
+
+.description-icon p {
+    margin-top: 0.4em;
+}
+
+#copy-intro h2 {
+    margin-bottom: 3px;
+}
+
+#copy-intro p {
+    margin-top: 0px;
+}
+
+#copyLink, #copyButton{
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+#copyLink {
+    height: 35px;
+    width: 230px;
+    border: solid white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#copyButton {
+    height: 43px;
+    width: 80px;
+}
+
+#copy-container a {
+    color: #3775e9;
+}
+
+footer {
+    margin-top: 6em;
+    text-align: center;
+}
+
+footer * {
+    margin: 0;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 25px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+  
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-github {
+    background: white;
+    color: black;
+}
+
+.fa-github:visited {
+    color: black;
 }
