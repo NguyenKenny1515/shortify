@@ -2,12 +2,13 @@ from flask import render_template, url_for, redirect, request
 from shortify import app
 from shortify.forms import UrlForm
 import requests
+import os
 
 url = "https://api.rebrandly.com/v1/links"
 headers = {
     "Accept": "application/json",
     "Content-Type": "application/json",
-    "apikey": "d9212b1827f64f378d8e42a655d1ff93"
+    "apikey": os.environ.get("SHORTIFY_API_KEY")
 }
 
 @app.route("/", methods=['GET', 'POST'])

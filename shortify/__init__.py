@@ -1,7 +1,8 @@
 from flask import Flask
+import os
 
 app = Flask(__name__)
 
-app.config["SECRET_KEY"] = "38ef006410412179afdc6a63ab9d1b09"
+app.config["SECRET_KEY"] = os.environ.get("SHORTIFY_SECRET_KEY")
 
 from shortify import routes
